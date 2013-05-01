@@ -138,3 +138,6 @@ let g:tagbar_autoclose = 0
 "Latex
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+"Numbers
+nnoremap <F4> :NumbersToggle<CR>
