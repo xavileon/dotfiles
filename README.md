@@ -20,3 +20,9 @@ place and modify some environment statements.
 $ cd .dotfiles
 $ dotfilize
 ```
+
+Clone the vim plugin repos:
+
+```
+$ git submodule update --init
+```
