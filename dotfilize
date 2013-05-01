@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+
+echo "" >> ~/.bashrc
+echo "# I Love my prompt" >> ~/.bashrc
+echo "source ~/.dotfiles/bashrc.d/git-completion.bash" >> ~/.bashrc
+echo "source ~/.dotfiles/bashrc.d/prompt.bash" >> ~/.bashrc
+
+bash
