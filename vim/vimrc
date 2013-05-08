@@ -117,6 +117,9 @@ augroup filetype
     au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
 
+" Vagrantfile is a ruby file!
+au BufRead,BufNewFile Vagrantfile set ft=ruby
+
 " ----------------------------------------------
 "  PLUGINS
 "  ---------------------------------------------
