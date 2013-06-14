@@ -113,9 +113,6 @@ filetype plugin indent on
 
 " set tags=~/.tags/pythontags,~/.tags/vimtags
 
-" PYTHON
-autocmd BufWritePost *.py call Flake8()
-
 " Google Protocol Buffers filetype
 augroup filetype
     au! BufRead,BufNewFile *.proto setfiletype proto
