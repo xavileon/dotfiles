@@ -87,10 +87,8 @@ set tags=~/.tags/vimtags
 sy on
 set t_Co=256
 if has('gui_running')
-    " colorscheme wombat
-    colorscheme compot
+    colorscheme wombat
 else
-    " colorscheme wombat256mod
     colorscheme molokai
 endif
 
