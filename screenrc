@@ -1,0 +1,20 @@
+# disable startup message
+startup_message off
+
+# autodetach screen sessions
+autodetach      on
+
+altscreen on
+# set status line always in last line
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+# Default screens
+screen -t code          0
+
+# Big scrollback
+defscrollback 50000
+
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"

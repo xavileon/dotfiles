@@ -3,6 +3,7 @@
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/gitconfig .gitconfig
+ln -s ~/.dotfiles/screenrc .screenrc
 
 echo "" >> ~/.bashrc
 echo "# I Love my prompt" >> ~/.bashrc
