@@ -1,0 +1,26 @@
+# Identify the home of our gtkrc file, important for setting styles of
+# gtk-based applications
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+# Load X resources (fixes some font issues)
+xrdb -merge .Xresources
+
+# load screen backgrounds
+xscreensaver -no-splash &
+
+# Load gnome-keyring
+# Seen in: http://blog.san-ss.com.ar/2011/03/using-gnome-keyring-in-xmonad.html
+eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+export GNOME_KEYRING_SOCKET
+export GNOME_KEYRING_PID
+
+# Start network manager applet
+nm-applet > /dev/null 2>/dev/null &
+
+# Start dropbox deamon
+dropbox start
+
+# Start xcfe-power-manager
+xfce4-power-manager
+
+exec xmonad
