@@ -30,7 +30,7 @@ border_color = #222222 0
 panel_monitor = all
 panel_position = bottom center horizontal
 panel_items = LCS
-panel_size =  25% 26
+panel_size =  35% 26
 panel_margin = 0 -1
 panel_padding = 10 0 5
 panel_dock = 0
@@ -39,10 +39,10 @@ panel_layer = top
 panel_background_id = 3
 
 # Panel Autohide
-autohide = 0=
+autohide = 1
 autohide_show_timeout = 0.1
 autohide_hide_timeout = 1.8
-autohide_height = 6
+autohide_height = 2
 strut_policy = follow_size
 
 # Launcher
@@ -54,6 +54,10 @@ launcher_item_app = /usr/share/applications/poweroff.desktop
 launcher_item_app = /usr/share/applications/terminator.desktop
 launcher_item_app = /usr/share/applications/vlc.desktop
 launcher_item_app = /usr/share/applications/Thunar-folder-handler.desktop
+launcher_item_app = /usr/share/applications/skype.desktop
+launcher_item_app = /usr/share/applications/hipchat.desktop
+launcher_item_app = /usr/share/applications/virtualbox.desktop
+launcher_item_app = /usr/share/applications/spotify.desktop
 
 # System Tray
 systray = 1
