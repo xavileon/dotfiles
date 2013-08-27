@@ -96,4 +96,5 @@ battery_font_color = #FFFFFF 100
 battery_padding = 2 0
 battery_background_id = 0
 
+taskbar_mode = single_desktop
 # End of config
