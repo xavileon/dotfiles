@@ -17,7 +17,7 @@ myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
 
 -- define workspace names
-myWorkspaces = [ "dev", "web", "social", "media", "games" ] ++ map show [6..9]
+myWorkspaces = [ "term", "web", "folders", "social", "media", "games", "vms" ] ++ map show [8..9]
 
 -- Width of the window border in pixels.
 myBorderWidth = 1
@@ -31,7 +31,11 @@ myBorderWidth = 1
 myManageHook :: ManageHook
 myManageHook = composeAll
     [ className =? "Iceweasel" --> doShift "web",
-      className =? "Pidgin" --> doShift "social" ]
+      (className =? "Iceweasel" <&&> resource =? "Dialog") --> doFloat,  -- Float Firefox dialogs
+      className =? "Skype" --> doShift "social",
+      className =? "Spotify" --> doShift "media",
+      className =? "Thunar" --> doShift "folders",
+      className =? "VirtualBox" --> doShift "vms" ]
 
 ------------------------------------------------------------------------
 
@@ -52,8 +56,8 @@ tabConfig = defaultTheme {
     inactiveColor = "#000000"
 }
 
-myLayout = ( (spacing 1 $ Tall 1 (3/100) (1/2)) ||| 
-             (spacing 1 $ Mirror (Tall 1 (3/100) (1/2))) |||
+myLayout = ( (spacing 3 $ Tall 1 (3/100) (1/2)) ||| 
+             (spacing 3 $ Mirror (Tall 1 (3/100) (1/2))) |||
              tabbed shrinkText tabConfig
            )
 

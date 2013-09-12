@@ -23,7 +23,6 @@ dropbox start
 # Start xcfe-power-manager
 xfce4-power-manager
 
-# Start volume manager
 pnmixer &
 
 exec xmonad
