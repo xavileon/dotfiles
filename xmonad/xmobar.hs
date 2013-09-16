@@ -1,5 +1,5 @@
 Config {
-    font = "xft:FreeMono:size=10:antialias=true",
+    font = "xft:UbuntuMono:size=11:antialias=true",
     commands = [Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 9, 
                 Run Memory ["-t","Mem: <usedratio>%"] 9,
                 Run Swap [] 9,
