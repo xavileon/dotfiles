@@ -4,11 +4,11 @@
 " -----------------------------------------------
 
 " Tabs to spaces.
-set expandtab 
-set shiftwidth=4 
-set softtabstop=4 
-set smarttab 
-set smartindent 
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set smartindent
 set tabstop=4
 
 " Never violate python max width
@@ -43,7 +43,7 @@ set cursorline
 
 " Enable omnicompletion and set some options
 set ofu=syntaxcomplete#Complete
-set completeopt=longest,menuone 
+set completeopt=longest,menuone
 " Change the behaviour of the <Enter> key in popmenu
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Add the C-Space mapping to enable omnicompletion
@@ -55,7 +55,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 " Autoload changes in .vimrc
-autocmd BufWritePost .vimrc source $MYVIMRC 
+autocmd BufWritePost .vimrc source $MYVIMRC
 
 " Move around the windows
 noremap <silent> ,j :wincmd j<CR>
@@ -85,8 +85,8 @@ colorscheme bubblegum
 
 
 " Show number lines the title of the window and the ruler
-set number 
-set title 
+set number
+set title
 set ruler
 
 " ---------------------------------------------
@@ -109,7 +109,7 @@ au BufRead,BufNewFile Vagrantfile set ft=ruby
 "  PLUGINS
 "  ---------------------------------------------
 
-" NERDTree 
+" NERDTree
 nnoremap <silent><F2> :NERDTreeToggle<CR>
 let NERDTreeAutoCenter = 1
 let NERDTreeCaseSensitiveSort = 1
@@ -162,3 +162,5 @@ let g:airline#extensions#branch#empty_message = 'no branch'
 
 " Work with tabs
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+" let g:airline#extensions#tabline#formatter = 'default'
