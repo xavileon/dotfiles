@@ -73,12 +73,6 @@ noremap <silent> ,wq <ESC>:wq<CR>
 noremap <silent> ,n :tabn<CR>
 noremap <silent> ,p :tabp<CR>
 
-set ttyfast
-
-" Set 'tags' files
-set tags=~/.tags/vimtags
-
-
 " ----------------------------------------------
 "  CUSTOMIZE VIEW
 " ----------------------------------------------
@@ -86,11 +80,8 @@ set tags=~/.tags/vimtags
 " Set theme.
 sy on
 set t_Co=256
-if has('gui_running')
-    colorscheme wombat
-else
-    colorscheme molokai
-endif
+set background=dark
+colorscheme bubblegum
 
 
 " Show number lines the title of the window and the ruler
@@ -110,11 +101,6 @@ call pathogen#helptags()
 filetype plugin indent on
 
 " set tags=~/.tags/pythontags,~/.tags/vimtags
-
-" Google Protocol Buffers filetype
-augroup filetype
-    au! BufRead,BufNewFile *.proto setfiletype proto
-augroup end
 
 " Vagrantfile is a ruby file!
 au BufRead,BufNewFile Vagrantfile set ft=ruby
@@ -141,11 +127,38 @@ let g:nerdtree_tabs_open_on_console_startup=1
 " Tagbar
 nnoremap <silent><F3> :TagbarToggle<CR>
 let g:tagbar_width = 30
-let g:tagbar_autoclose = 0
+let g:tagbar_autoclose = 1
 
 "Latex
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
-"Numbers
-nnoremap <F4> :NumbersToggle<CR>
+"-------------
+"   Airline
+"-------------
+" We should add this line to watch airline from the begging
+set laststatus=2
+
+" Add airline powerline-patched fonts. To do this, clone this
+" repo: https://github.com/Lokaltog/powerline-fonts
+" in your ~/.fonts directory, and execute
+" $ fc-cache -f -v
+let g:airline_powerline_fonts=1
+
+" Cool symbols
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.branch = '⎇'
+
+" Enable tagbar integration
+let g:airline#extensions#tagbar#enabled = 1
+
+" Enable fugitive integration
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#empty_message = 'no branch'
+
+" Work with tabs
+let g:airline#extensions#tabline#enabled = 1
