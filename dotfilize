@@ -6,8 +6,13 @@ ln -s ~/.dotfiles/gitconfig .gitconfig
 ln -s ~/.dotfiles/screenrc .screenrc
 
 echo "" >> ~/.bashrc
-echo "# I Love my prompt" >> ~/.bashrc
+echo "### I Love my prompt" >> ~/.bashrc
 echo "source ~/.dotfiles/bashrc.d/git-completion.bash" >> ~/.bashrc
 echo "source ~/.dotfiles/bashrc.d/prompt.bash" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "### Vim as default editor" >> ~/.bashrc
+echo "export EDITOR=vim" >> ~/.bashrc
+
+cd .dotfiles && git submodule update --init && cd ..
 
 bash
