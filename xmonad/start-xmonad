@@ -5,8 +5,11 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # Load X resources (fixes some font issues)
 xrdb -merge .Xresources
 
+# Start compositing to support transparency.
+xcompmgr -n &
+
 # load screen backgrounds
-xscreensaver -no-splash &
+nitrogen --restore &
 
 # Load gnome-keyring
 # Seen in: http://blog.san-ss.com.ar/2011/03/using-gnome-keyring-in-xmonad.html
@@ -15,14 +18,14 @@ export GNOME_KEYRING_SOCKET
 export GNOME_KEYRING_PID
 
 # Start network manager applet
-nm-applet > /dev/null 2>/dev/null &
+/usr/lib/notification-daemon/notification-daemon &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+nm-applet --sm-disable > /dev/null 2>/dev/null &
+
+# Start volume control applet
+gnome-sound-applet &
 
 # Start dropbox deamon
 dropbox start
-
-# Start xcfe-power-manager
-xfce4-power-manager
-
-pnmixer &
 
 exec xmonad

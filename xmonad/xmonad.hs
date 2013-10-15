@@ -32,7 +32,10 @@ myManageHook :: ManageHook
 myManageHook = composeAll
     [ className =? "Iceweasel" --> doShift "web",
       (className =? "Iceweasel" <&&> resource =? "Dialog") --> doFloat,  -- Float Firefox dialogs
+      className =? "Firefox" --> doShift "web",
+      (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat,  -- Float Firefox dialogs
       className =? "Skype" --> doShift "social",
+      className =? "Xchat" --> doShift "social",
       className =? "Spotify" --> doShift "media",
       className =? "Thunar" --> doShift "folders",
       className =? "VirtualBox" --> doShift "vms" ]

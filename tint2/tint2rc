@@ -50,13 +50,11 @@ launcher_padding = 8 4 4
 launcher_background_id = 1
 launcher_icon_size = 36
 launcher_icon_theme = Faenza-Dark
-launcher_item_app = /usr/share/applications/poweroff.desktop
 launcher_item_app = /usr/share/applications/terminator.desktop
 launcher_item_app = /usr/share/applications/vlc.desktop
 launcher_item_app = /usr/share/applications/Thunar-folder-handler.desktop
 launcher_item_app = /usr/share/applications/skype.desktop
 launcher_item_app = /usr/share/applications/hipchat.desktop
-launcher_item_app = /usr/share/applications/virtualbox.desktop
 launcher_item_app = /usr/share/applications/spotify.desktop
 
 # System Tray
