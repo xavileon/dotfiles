@@ -104,6 +104,7 @@ filetype plugin indent on
 
 " Vagrantfile is a ruby file!
 au BufRead,BufNewFile Vagrantfile set ft=ruby
+au BufRead,BufNewFile *.pp set ft=puppet
 
 " ----------------------------------------------
 "  PLUGINS
