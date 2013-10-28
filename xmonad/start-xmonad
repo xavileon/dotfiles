@@ -28,4 +28,7 @@ gnome-sound-applet &
 # Start dropbox deamon
 dropbox start
 
+# Start tint2
+tint2 &
+
 exec xmonad

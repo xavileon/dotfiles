@@ -72,10 +72,7 @@ myLayout = ( (spacing 3 $ Tall 1 (3/100) (1/2)) |||
 -- No need to modify this.
 --
 main = do
-    spawn "nitrogen --restore"
-    spawn "cb-compositor --start"
     xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
-    tint2 <- spawnPipe "tint2"
     xmonad defaultConfig {
         -- basic stuff
         borderWidth = myBorderWidth,
