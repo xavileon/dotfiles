@@ -114,10 +114,11 @@ prompt()
 
     if [ "$SSH_TTY" -o "$USER" = root ]; then
         # Root or remote system, display host and full path
-        PS1="$cyan[$white\u@\h:\${shortPWD}$cyan]$nocolor"'\$ '
+        # PS1="$cyan[$white\u@\h:\${shortPWD}$cyan]$nocolor"'\$ '
+        PS1="$white\u@\h:\${shortPWD}$cyan > $nocolor"
     else
        # Skip user@host when on local system; it will be in the title bar
-        PS1="$cyan[$white\${shortPWD}$cyan]$nocolor"'\$ '
+        PS1="$white\${shortPWD}$cyan > $nocolor"
     fi
 }
 
