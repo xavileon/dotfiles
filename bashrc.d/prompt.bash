@@ -4,7 +4,7 @@
 
 short_pwd ()
 {
-    local pwd_length=${PROMPT_LEN-30}
+    local pwd_length=${PROMPT_LEN-20}
     local cur_pwd=$(echo $(pwd) | sed -e "s,^$HOME,~,")
     if [ $(echo -n $cur_pwd | wc -c | tr -d " ") -gt $pwd_length ]; then
   echo "...$(echo $cur_pwd | sed -e "s/.*\(.\{$pwd_length\}\)/\1/")"
