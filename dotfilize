@@ -5,6 +5,7 @@ ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/screenrc ~/.screenrc
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
 ##  Set bash rc
 echo "" >> ~/.bashrc
