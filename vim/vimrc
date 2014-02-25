@@ -1,4 +1,3 @@
-
 " -----------------------------------------------
 " CUSTOMIZE BEHAVIOUR
 " -----------------------------------------------
@@ -89,6 +88,10 @@ set number
 set title
 set ruler
 
+" Open new slip panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " ---------------------------------------------
 "  FILETYPE specials
 "  -------------------------------------------
@@ -99,8 +102,6 @@ call pathogen#helptags()
 
 " Enable filetype support
 filetype plugin indent on
-
-" set tags=~/.tags/pythontags,~/.tags/vimtags
 
 " Vagrantfile is a ruby file!
 au BufRead,BufNewFile Vagrantfile set ft=ruby
