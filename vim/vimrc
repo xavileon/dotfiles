@@ -122,6 +122,7 @@ let NERDTreeIgnore = ['\~$','\.pyc$','\py.class$']
 let NERDTreeShowLineNumbers=0
 let NERDTreeDirArrows=0
 let NERDTreeAutoDeleteBuffer=1
+let NERDTreeShowHidden = 1
 
 " NERDTreeTabs
 let g:nerdtree_tabs_open_on_console_startup=1
