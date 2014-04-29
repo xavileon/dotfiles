@@ -20,3 +20,6 @@
     purr = pull --rebase
     ready = rebase -i @{u}
     fixup = commit --amend --no-edit
+[grep]
+    lineNumber = True     ; show line number by default in git grep
+    extendedRegex = True  ; --extended-regex by default

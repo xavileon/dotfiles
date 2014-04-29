@@ -8,9 +8,6 @@ xrdb -merge .Xresources
 # Start compositing to support transparency.
 xcompmgr -n &
 
-# load screen backgrounds
-nitrogen --restore &
-
 # Load gnome-keyring
 # Seen in: http://blog.san-ss.com.ar/2011/03/using-gnome-keyring-in-xmonad.html
 eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
@@ -32,3 +29,6 @@ dropbox start
 tint2 &
 
 exec xmonad
+
+# load screen backgrounds
+/home/jaume/documents/screens.sh

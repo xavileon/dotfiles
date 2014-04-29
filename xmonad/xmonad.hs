@@ -34,6 +34,8 @@ myManageHook = composeAll
       (className =? "Iceweasel" <&&> resource =? "Dialog") --> doFloat,  -- Float Firefox dialogs
       className =? "Firefox" --> doShift "web",
       (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat,  -- Float Firefox dialogs
+      className =? "Google-chrome" --> doShift "web",
+      (className =? "Google-chrome" <&&> resource =? "Dialog") --> doFloat,  -- Float Firefox dialogs
       className =? "Skype" --> doShift "social",
       className =? "Xchat" --> doShift "social",
       className =? "Spotify" --> doShift "media",

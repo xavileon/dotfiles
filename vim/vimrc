@@ -11,10 +11,6 @@ set smarttab
 set smartindent
 set tabstop=4
 
-" Never violate python max width
-" set textwidth=80
-
-
 " Encoding options.
 set encoding=utf-8 fileencoding=utf-8
 
@@ -73,6 +69,12 @@ noremap <silent> ,wq <ESC>:wq<CR>
 noremap <silent> ,n :tabn<CR>
 noremap <silent> ,p :tabp<CR>
 
+" Move around buffers
+noremap <silent> ,b <ESC>:b
+
+"This clears the 'last search pattern' by hitting return
+nnoremap <CR> :noh<CR><CR>
+
 " ----------------------------------------------
 "  CUSTOMIZE VIEW
 " ----------------------------------------------
@@ -104,13 +106,17 @@ filetype plugin indent on
 
 " Vagrantfile is a ruby file!
 au BufRead,BufNewFile Vagrantfile set ft=ruby
+
+" Set puppet filetype when file finishes with *.pp
 au BufRead,BufNewFile *.pp set ft=puppet
 
-" ----------------------------------------------
+" =============================================
 "  PLUGINS
-"  ---------------------------------------------
+" =============================================
 
-" NERDTree
+" ----------
+"  NERDTree
+" ----------
 nnoremap <silent><F2> :NERDTreeToggle<CR>
 let NERDTreeAutoCenter = 1
 let NERDTreeCaseSensitiveSort = 1
@@ -122,21 +128,26 @@ let NERDTreeShowLineNumbers=0
 let NERDTreeDirArrows=0
 let NERDTreeAutoDeleteBuffer=1
 
-" NERDTreeTabs
+" --------------
+"  NERDTreeTabs
+" --------------
 let g:nerdtree_tabs_open_on_console_startup=1
 
-" Tagbar
+" --------
+"  Tagbar
+" --------
 nnoremap <silent><F3> :TagbarToggle<CR>
 let g:tagbar_width = 30
-let g:tagbar_autoclose = 1
 
-"Latex
+" -------
+"  Latex
+" -------
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
-"-------------
-"   Airline
-"-------------
+" ---------
+"  Airline
+" ---------
 " We should add this line to watch airline from the begging
 set laststatus=2
 
@@ -161,9 +172,8 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = 'no branch'
 
-" Work with tabs
+" Smart tablines
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
 
 " Enable virtualenv integration
 let g:airline#extensions#virtualenv#enabled = 1

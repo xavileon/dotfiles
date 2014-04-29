@@ -27,7 +27,7 @@ background_color = #222222 0
 border_color = #222222 0
 
 # Panel
-panel_monitor = all
+panel_monitor = 2
 panel_position = bottom center horizontal
 panel_items = LCS
 panel_size =  35% 26
@@ -39,7 +39,7 @@ panel_layer = top
 panel_background_id = 3
 
 # Panel Autohide
-autohide = 1
+autohide = 0
 autohide_show_timeout = 0.1
 autohide_hide_timeout = 1.8
 autohide_height = 2
@@ -50,6 +50,7 @@ launcher_padding = 8 4 4
 launcher_background_id = 1
 launcher_icon_size = 36
 launcher_icon_theme = Faenza-Dark
+launcher_item_app = /usr/share/applications/poweroff.desktop
 launcher_item_app = /usr/share/applications/terminator.desktop
 launcher_item_app = /usr/share/applications/vlc.desktop
 launcher_item_app = /usr/share/applications/Thunar-folder-handler.desktop
