@@ -179,3 +179,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Enable virtualenv integration
 let g:airline#extensions#virtualenv#enabled = 1
+
+" ----------
+"  Fugitive
+" ----------
+autocmd BufReadPost fugitive://* set bufhidden=delete
