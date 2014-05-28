@@ -1,3 +1,5 @@
 " Actions executed when vim enters into an RST file
-set textwidth=80
-set formatoptions+=t
+setlocal textwidth=80
+setlocal formatoptions+=t
+setlocal spell
+setlocal spelllang=en_gb
