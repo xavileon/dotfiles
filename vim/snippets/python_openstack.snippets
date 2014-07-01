@@ -1,0 +1,10 @@
+snippet rs
+	${0}: {
+	},
+
+snippet prop
+	${1}: {'allow_post': ${2:True}, 'allow_put': ${3:True},
+	       'validate': {'type:${4:string}': None },
+		   'is_visible': ${5:True}, 'default': ${6:None},
+		   'required_by_policy': ${7:False},
+		   'enforce_policy': ${8:False}},

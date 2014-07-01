@@ -28,4 +28,11 @@ git clone https://github.com/bling/vim-airline.git ~/.dotfiles/vim/bundle/vim-ai
 git clone https://github.com/puppetlabs/puppet-syntax-vim.git ~/.dotfiles/vim/bundle/puppet-syntax-vim
 git clone https://github.com/jmcantrell/vim-virtualenv.git ~/.dotfiles/vim/bundle/vim-virtualenv
 
-bash
+# Snipmate needs several clones
+git clone https://github.com/tomtom/tlib_vim.git ~/.dotfiles/vim/bundle/tlib_vim
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.dotfiles/vim/bundle/vim-addon-mw-utils
+git clone https://github.com/garbas/vim-snipmate.git ~/.dotfiles/vim/bundle/vim-snipmate
+git clone https://github.com/honza/vim-snippets.git ~/.dotfiles/vim/bundle/vim-snippets
+
+
+source ~/.bashrc
