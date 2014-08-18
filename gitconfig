@@ -11,7 +11,7 @@
 [alias]
     st = status -sb
     ci = commit
-    br = branch
+    br = branch -v
     co = checkout
     df = diff
 	lg = log --pretty=format:'%Cgreen%H%Creset - %Cred%an%Creset : %s'

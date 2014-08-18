@@ -27,6 +27,7 @@ git clone git://github.com/nvie/vim-flake8.git  ~/.dotfiles/vim/bundle/vim-flake
 git clone https://github.com/bling/vim-airline.git ~/.dotfiles/vim/bundle/vim-airline
 git clone https://github.com/puppetlabs/puppet-syntax-vim.git ~/.dotfiles/vim/bundle/puppet-syntax-vim
 git clone https://github.com/jmcantrell/vim-virtualenv.git ~/.dotfiles/vim/bundle/vim-virtualenv
+git clone https://github.com/kien/ctrlp.vim.git ~/.dotfiles/vim/bundle/ctrlp
 
 # Snipmate needs several clones
 git clone https://github.com/tomtom/tlib_vim.git ~/.dotfiles/vim/bundle/tlib_vim
