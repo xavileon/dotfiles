@@ -1,15 +1,14 @@
 ## How to use it
 
-Clone it into the .dotfiles directory in your $HOME path
+Clone the project. I recommend to use a hidden directory 
 
 ```bash 
 $ git clone git://github.com/jdevesa/dotfiles.git .dotfiles
 ```
 
 Execute the 'dotfilize' script to link the configuration files into their proper
-place and modify some environment statements.
+place.
 
 ```bash 
-$ cd .dotfiles
-$ ./dotfilize
+$ .dotfiles/dotfilize
 ```

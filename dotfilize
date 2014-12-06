@@ -1,39 +1,41 @@
 #!/bin/bash
 
+SOURCE=$PWD"/"$BASH_SOURCE
+DIR=$(dirname ${SOURCE})
+
 ## Create links
-ln -s ~/.dotfiles/vim ~/.vim
-ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/screenrc ~/.screenrc
-ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -s $DIR/vim ~/.vim
+ln -s $DIR/vim/vimrc ~/.vimrc
+ln -s $DIR/gitconfig ~/.gitconfig
+ln -s $DIR/screenrc ~/.screenrc
+ln -s $DIR/tmux.conf ~/.tmux.conf
 
 ##  Set bash rc
 echo "" >> ~/.bashrc
 echo "### I Love my prompt" >> ~/.bashrc
-echo "source ~/.dotfiles/bashrc.d/git-completion.bash" >> ~/.bashrc
-echo "source ~/.dotfiles/bashrc.d/prompt.bash" >> ~/.bashrc
+echo "source $DIR/bashrc.d/git-completion.bash" >> ~/.bashrc
+echo "source $DIR/bashrc.d/prompt.bash" >> ~/.bashrc
 echo "" >> ~/.bashrc
 echo "### Vim as default editor" >> ~/.bashrc
 echo "export EDITOR=vim" >> ~/.bashrc
 
 ## Clone VIM plugins
-git clone https://github.com/tomtom/tcomment_vim.git ~/.dotfiles/vim/bundle/tcomment
-git clone https://github.com/scrooloose/nerdtree.git ~/.dotfiles/vim/bundle/nerdtree
-git clone https://github.com/sukima/xmledit.git ~/.dotfiles/vim/bundle/xmledit
-git clone git://github.com/majutsushi/tagbar ~/.dotfiles/vim/bundle/tagbar
-git clone git://github.com/tpope/vim-fugitive.git ~/.dotfiles/vim/bundle/vim-fugitive
-git clone git://github.com/tpope/vim-surround.git ~/.dotfiles/vim/bundle/vim-surround
-git clone git://github.com/nvie/vim-flake8.git  ~/.dotfiles/vim/bundle/vim-flake8
-git clone https://github.com/bling/vim-airline.git ~/.dotfiles/vim/bundle/vim-airline
-git clone https://github.com/puppetlabs/puppet-syntax-vim.git ~/.dotfiles/vim/bundle/puppet-syntax-vim
-git clone https://github.com/jmcantrell/vim-virtualenv.git ~/.dotfiles/vim/bundle/vim-virtualenv
-git clone https://github.com/kien/ctrlp.vim.git ~/.dotfiles/vim/bundle/ctrlp
+git clone https://github.com/tomtom/tcomment_vim.git $DIR/vim/bundle/tcomment
+git clone https://github.com/scrooloose/nerdtree.git $DIR/vim/bundle/nerdtree
+git clone https://github.com/sukima/xmledit.git $DIR/vim/bundle/xmledit
+git clone git://github.com/majutsushi/tagbar $DIR/vim/bundle/tagbar
+git clone git://github.com/tpope/vim-fugitive.git $DIR/vim/bundle/vim-fugitive
+git clone git://github.com/tpope/vim-surround.git $DIR/vim/bundle/vim-surround
+git clone git://github.com/nvie/vim-flake8.git  $DIR/vim/bundle/vim-flake8
+git clone https://github.com/bling/vim-airline.git $DIR/vim/bundle/vim-airline
+git clone https://github.com/puppetlabs/puppet-syntax-vim.git $DIR/vim/bundle/puppet-syntax-vim
+git clone https://github.com/jmcantrell/vim-virtualenv.git $DIR/vim/bundle/vim-virtualenv
+git clone https://github.com/kien/ctrlp.vim.git $DIR/vim/bundle/ctrlp
 
 # Snipmate needs several clones
-git clone https://github.com/tomtom/tlib_vim.git ~/.dotfiles/vim/bundle/tlib_vim
-git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.dotfiles/vim/bundle/vim-addon-mw-utils
-git clone https://github.com/garbas/vim-snipmate.git ~/.dotfiles/vim/bundle/vim-snipmate
-git clone https://github.com/honza/vim-snippets.git ~/.dotfiles/vim/bundle/vim-snippets
+git clone https://github.com/tomtom/tlib_vim.git $DIR/vim/bundle/tlib_vim
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git $DIR/vim/bundle/vim-addon-mw-utils
+git clone https://github.com/garbas/vim-snipmate.git $DIR/vim/bundle/vim-snipmate
+git clone https://github.com/honza/vim-snippets.git $DIR/vim/bundle/vim-snippets
 
-
-source ~/.bashrc
+source $HOME/.bashrc
