@@ -10,6 +10,10 @@ ln -s $DIR/gitconfig ~/.gitconfig
 ln -s $DIR/screenrc ~/.screenrc
 ln -s $DIR/tmux.conf ~/.tmux.conf
 
+## Install some packages
+sudo apt-get install -y python-pip
+sudo pip install jedi
+
 ##  Set bash rc
 echo "" >> ~/.bashrc
 echo "### I Love my prompt" >> ~/.bashrc
@@ -35,7 +39,7 @@ git clone https://github.com/kien/ctrlp.vim.git $DIR/vim/bundle/ctrlp
 # Snipmate needs several clones
 git clone https://github.com/tomtom/tlib_vim.git $DIR/vim/bundle/tlib_vim
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git $DIR/vim/bundle/vim-addon-mw-utils
-git clone https://github.com/garbas/vim-snipmate.git $DIR/vim/bundle/vim-snipmate
+git clone --recursive https://github.com/davidhalter/jedi-vim.git $DIR/vim/bundle/jedi-vim
 git clone https://github.com/honza/vim-snippets.git $DIR/vim/bundle/vim-snippets
 
 source $HOME/.bashrc
