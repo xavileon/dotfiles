@@ -500,7 +500,6 @@ __git_ps1 ()
 	local z="${GIT_PS1_STATESEPARATOR-" "}"
 
 	# NO color option unless in PROMPT_COMMAND mode
-    __git_ps1_colorize_gitstring
 	if [ $pcmode = yes ] && [ -n "${GIT_PS1_SHOWCOLORHINTS-}" ]; then
 		__git_ps1_colorize_gitstring
 	fi

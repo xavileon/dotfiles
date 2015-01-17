@@ -1,6 +1,9 @@
 #!/bin/bash
 #
-# Nick Sieger's Bash Prompt (trimmed)
+# Adapted from
+# - Nick Sieger's Bash Prompt (trimmed)
+# - http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
+# - Cherry picked from both sources to fit my needs
 
 short_pwd ()
 {
@@ -13,27 +16,37 @@ short_pwd ()
     fi
 }
 
-prompt()
-{
-    local cyan='\[\033[1;36m\]'
-    local white='\[\033[0;1m\]'
-    local red='\[\033[0;31m\]'
-    local green='\[\033[0;32m\]'
-    local nocolor='\[\033[0m\]'
-    
-    title
-
+location() {
+    # Check if local or remote
     if [ "$SSH_TTY" -o "$USER" = root ]; then
-        # Root or remote system, display host and full path
-        PROMPT_COMMAND='__git_ps1 "$white\u@\h:$(short_pwd)" "$cyan > $nocolor"'
+        # Root  or remote system, display host and full path
+        echo "$BWhite\u@\h:"
     else
-        # Skip user@host when on local system; it will be in the title bar
-        PROMPT_COMMAND='__git_ps1 "$white$(short_pwd)" "$cyan > $nocolor"'
+        # Skip user@host when on local system
+        echo "$BWhite"
     fi
 }
 
-# Set up environment for git coloring
-GIT_PS1_SHOWCOLORHINTS=true
-GIT_PS1_SHOWDIRTYSTATE=true
-# Set up $PS1 and $PROMPT_COMMAND
+prompt() {
+  PS1=$(location)$Color_Off'$(git branch &>/dev/null;\
+  if [ $? -eq 0 ]; then \
+    echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+    if [ "$?" -eq "0" ]; then \
+      # @4 - Clean repository - nothing to commit
+      echo "'$Green'"$(__git_ps1 "(%s)"); \
+    else \
+      # @5 - Changes to working tree
+      echo "'$IRed'"$(__git_ps1 "{%s}"); \
+      fi) '$BYellow\${shortPWD}$Color_Off'\$ "; \
+  else \
+    # @2 - Prompt when not in GIT repo
+    echo " '$Yellow\${shortPWD}$Color_Off'\$ "; \
+  fi)'
+}
+
+_prompt_command() {
+    shortPWD=$(short_pwd)
+}
+
 prompt
+export PROMPT_COMMAND=_prompt_command

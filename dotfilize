@@ -18,6 +18,8 @@ sudo pip install jedi
 echo "" >> ~/.bashrc
 echo "### I Love my prompt" >> ~/.bashrc
 echo "source $DIR/bashrc.d/git-completion.bash" >> ~/.bashrc
+echo "source $DIR/bashrc.d/git-prompt.bash" >> ~/.bashrc
+echo "source $DIR/bashrc.d/colors.bash" >> ~/.bashrc
 echo "source $DIR/bashrc.d/prompt.bash" >> ~/.bashrc
 echo "" >> ~/.bashrc
 echo "### Vim as default editor" >> ~/.bashrc
