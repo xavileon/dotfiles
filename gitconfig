@@ -1,7 +1,7 @@
 [user]
-	name = Jaume Devesa
-	email = devvesa@gmail.com
-	signingkey = 1C8BF8A7
+	name = Xavier León
+	email = xleon.mail@gmail.com
+    signingkey = 1C8BF8A7
 [credential]
 	helper = cache --timeout=3600
 [core]
@@ -23,3 +23,5 @@
 [grep]
     lineNumber = True     ; show line number by default in git grep
     extendedRegex = True  ; --extended-regex by default
+[push]
+	default = simple
