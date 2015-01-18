@@ -22,6 +22,7 @@ set mouse=a
 " Manage multiple buffers effectively
 set hidden
 
+
 " Map leader to ,
 let mapleader = ","
 
@@ -67,6 +68,11 @@ noremap <silent> ,wq <ESC>:wq<CR>
 " Move around tabs
 noremap <silent> ,n :tabn<CR>
 noremap <silent> ,p :tabp<CR>
+
+" Move to the next buffer
+noremap <leader>ñ :bnext<CR>
+noremap <leader>l :bprevious<CR>
+noremap <leader>bl :ls<CR>
 
 "This clears the 'last search pattern' by hitting return
 nnoremap <CR> :noh<CR><CR>
@@ -183,11 +189,28 @@ let g:airline#extensions#virtualenv#enabled = 1
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " ---------
+"  Jedi
+" ---------
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#usages_command = "<leader>u"
+
+" ---------
 "  CtrlP
 " ---------
 set wildignore+=*.pyc,*.swp
 noremap <silent> ,b <ESC>:CtrlPBuffer<CR>
 noremap <silent> ,f <ESC>:CtrlP<CR>
+
+let g:ctrlp_working_path_mode = 'r'
+
+" Use a leader instead of the actual named binding
+nmap <leader>p :CtrlP<CR>
+
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<CR>
+nmap <leader>bm :CtrlPMixed<CR>
+nmap <leader>bs :CtrlPMRU<CR>
+
 
 " ---------
 "  Vimflake
