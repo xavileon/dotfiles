@@ -37,7 +37,7 @@ git clone https://github.com/bling/vim-airline.git $DIR/vim/bundle/vim-airline
 git clone https://github.com/puppetlabs/puppet-syntax-vim.git $DIR/vim/bundle/puppet-syntax-vim
 git clone https://github.com/jmcantrell/vim-virtualenv.git $DIR/vim/bundle/vim-virtualenv
 git clone https://github.com/kien/ctrlp.vim.git $DIR/vim/bundle/ctrlp
-
+git clone https://github.com/Townk/vim-autoclose.git $DIR/vim/bundle/vim-autoclose
 # Snipmate needs several clones
 git clone https://github.com/tomtom/tlib_vim.git $DIR/vim/bundle/tlib_vim
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git $DIR/vim/bundle/vim-addon-mw-utils
