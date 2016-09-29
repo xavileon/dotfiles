@@ -11,7 +11,7 @@ ln -s $DIR/screenrc ~/.screenrc
 ln -s $DIR/tmux.conf ~/.tmux.conf
 
 ## Install some packages
-sudo apt-get install -y python-pip
+sudo apt-get install -qy python-pip
 sudo pip install jedi
 
 ##  Set bash rc

@@ -1,6 +1,6 @@
 [user]
-	name = Xavier León
-	email = xleon.mail@gmail.com
+	name = Xavi León
+	email = xavi.leon@midokura.com
     signingkey = 1C8BF8A7
 [credential]
 	helper = cache --timeout=3600
@@ -25,3 +25,5 @@
     extendedRegex = True  ; --extended-regex by default
 [push]
 	default = simple
+[gitreview]
+	username = xavileon

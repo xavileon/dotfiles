@@ -85,7 +85,6 @@ nnoremap <CR> :noh<CR><CR>
 sy on
 set t_Co=256
 set background=dark
-colorscheme bubblegum
 
 
 " Show number lines the title of the window and the ruler
@@ -100,10 +99,6 @@ set splitright
 " ---------------------------------------------
 "  FILETYPE specials
 "  -------------------------------------------
-
-" Activate pathogen (always before enable filetype plugin indent on!)
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 " Enable filetype support
 filetype plugin indent on
