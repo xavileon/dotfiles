@@ -50,9 +50,6 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
 
-" Autoload changes in .vimrc
-autocmd BufWritePost .vimrc source $MYVIMRC
-
 " Move around the windows
 noremap <silent> ,j :wincmd j<CR>
 noremap <silent> ,h :wincmd h<CR>
@@ -99,6 +96,10 @@ set splitright
 " ---------------------------------------------
 "  FILETYPE specials
 "  -------------------------------------------
+
+" Activate pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " Enable filetype support
 filetype plugin indent on
@@ -211,3 +212,6 @@ nmap <leader>bs :CtrlPMRU<CR>
 "  Vimflake
 "  --------
 autocmd BufWritePost *.py call Flake8()
+
+" Autoload changes in .vimrc
+autocmd BufWritePost .vimrc source $MYVIMRC
